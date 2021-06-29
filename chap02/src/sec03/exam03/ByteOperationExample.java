@@ -11,12 +11,12 @@ public class ByteOperationExample {
 		// int, JVM에서 연산
 		byte x = 10;
 		byte y = 20;
-		int result = x+ y; //정수는 연산할 때 int 타입으로 변환되므로 받는 값은 int로 선언
+		int result = x + y; //정수는 연산할 때 int 타입으로 변환되므로 받는 값은 int로 선언
 		System.out.println(result);
 		
 		// long, JVM에서 연산
 		byte x2 = 30;
-		long y2 = 40;
+		long y2 = 40L;
 		long result2 = x2 + y2; //피연산자에 long이 있으면 long으로 변환되므로 받는 값은 long으로 선언한다.
 		System.out.println(result2);
 	}

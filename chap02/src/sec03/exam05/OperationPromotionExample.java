@@ -1,5 +1,5 @@
 package sec03.exam05;
-
+//자동타입변환, 강제타입변환
 public class OperationPromotionExample {
 
 	public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class OperationPromotionExample {
 		System.out.println("정수의 나누기: " + intValue4);
 		
 		double doubleValue = intValue3 / 4.0; // 실수의 나누기 이므로 2.5가 나옴
-		System.out.println("실수의 나누기: " + doubleValue);
+		System.out.println("실수로 바꾸어서 나누기: " + doubleValue);
 		
 		int x = 1;
 		int y = 2;

@@ -1,5 +1,5 @@
 package sec03.exam04;
-
+//long 타입 정수형 연산
 public class LongOperationExample {
 
 	public static void main(String[] args) {
