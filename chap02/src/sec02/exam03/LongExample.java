@@ -1,5 +1,6 @@
 package sec02.exam03;
-
+// 정수형, long은 900경까지 표현할 수 있지만 
+//L을 안쓰면 Java에서 int형으로 읽어서 오류가 뜬다. int형은 20억까지만 표현 가능하다
 public class LongExample {
 
 	public static void main(String[] args) {

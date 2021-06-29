@@ -1,5 +1,5 @@
 package sec01.exam03;
-
+//변수를 이용한 위치 이동
 public class VariableExchangeExample {
 
 	public static void main(String[] args) {

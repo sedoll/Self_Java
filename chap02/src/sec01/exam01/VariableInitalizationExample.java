@@ -1,5 +1,6 @@
 package sec01.exam01;
 
+//클래스를 만들뜨는 꼭 앞자리는 대문자로 써라!!!
 public class VariableInitalizationExample {
 
 	public static void main(String[] args) {
