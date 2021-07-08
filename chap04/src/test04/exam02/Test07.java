@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Test07 {
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) {
 		boolean run = true;
 		int balance = 0;
 		int money = 0;
