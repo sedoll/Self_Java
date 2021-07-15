@@ -8,13 +8,13 @@ public class StringEqualsExample {
 		//지금 현재 두 변수는 같은 객체를 참조하는 변수이다.
 		
 		if(strVar1 == strVar2) { //==은 객체의 참조 번지가 같은지를 확인
-			System.out.println("같은 객체를 참조함");
+			System.out.println("같은 객체를 참조함"); // 1과 2는 서로 객체 번지가 같기 때문에 true가 된다.
 		} else {
 			System.out.println("같은 객체를 참조하지 않음");
 		}
 		
 		if(strVar1.equals(strVar2)) {
-			System.out.println("문자열이 같음");
+			System.out.println("문자열이 같음"); //문자열의 내용이 같기 때문에 true가 나온다.
 		}
 		
 		String strVar3 = new String("심민철");
