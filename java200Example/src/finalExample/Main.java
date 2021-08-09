@@ -10,6 +10,7 @@ public class Main {
 		final int x = 0;
 		// 지금 현재 x가 final로 선언 되었으므로 입력값을 받을려고 할 때 값이 바뀌니까 오류가 뜸
 		//x = sc.nextInt();
+
 		
 		
 
