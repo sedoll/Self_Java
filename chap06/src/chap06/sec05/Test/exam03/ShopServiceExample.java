@@ -1,8 +1,9 @@
 package chap06.sec05.Test.exam03;
 
 public class ShopServiceExample {
-
+	
 	public static void main(String[] args) {
+		
 		ShopService obj1 = ShopService.getInstance();
 		ShopService obj2 = ShopService.getInstance();
 		
