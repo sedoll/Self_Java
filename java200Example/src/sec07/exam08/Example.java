@@ -6,65 +6,44 @@ public class Example {
 	static int y;
 	static int z;
 	static int culc;
+	static int maximum = 5;
 	
-	static void example(int ran) {
+	public void culc(int ran) {
 		x = (int) (Math.random()*100);
 		y = (int) (Math.random()*100);
 		z = (int) (Math.random()*100);
 		switch(ran) {
 			case 1:
-				Example.println(x, y, z);
-				Example.culc();
+				result = x + y + z;
+				println(ran, x, y, z);
 				break;
 			case 2:
-				Example.println(x, y, z);
-				Example.culc();
+				result = x + y - z;
+				println(ran, x, y, z);
 				break;
 			case 3:
-				Example.println(x, y, z);
-				Example.culc();
+				result = x - y + z;
+				println(ran, x, y, z);
 				break;
 			case 4:
-				Example.println(x, y, z);
-				Example.culc();
+				result = x - y - z;
+				println(ran, x, y, z);
 				break;
 		}
 	}
 	
-	static void println(int x, int y, int z) {
-		if(y <=2) {
-			System.out.print( x + " + " + y + " ");
-			if(z % 2 == 0) {
-				result = x + y - z;
-				System.out.print(" - " + z + " ");
-			} else {
-				result = x + y + z;
-				System.out.print(" + " + z + " ");
-			}
-		} else {
-			System.out.print( x + " - " + y);
-			if(z % 2 == 0) {
-				result = x - y - z;
-				System.out.print(" - " + z + " ");
-			} else {
-				result = x - y + z;
-				System.out.print(" + " + z + " ");
-			}
-		}
-	}
-	
-	static void culc() {
+	public void println(int ran,int x, int y, int z) {
 		int cont = 1;
+		System.out.println(x + ((ran>2) ? " - "+y:" + "+y) + ((ran%2==0) ? " - "+z:" + "+z));
 		do {
-			if(cont == 1) {
-				System.out.print("정답은? : ");
-				culc = Main.sc.nextInt();
+			if(cont==1) {
+				System.out.print("정답 : ");
 				cont++;
 			} else {
-				System.out.print("틀렸습니다. 다시 입력하세요 : ");
-				culc = Main.sc.nextInt();
+				System.out.print("다시 입력하세요. : ");
 			}
+			culc = Main.sc.nextInt();
 		} while(culc != result);
-		System.out.println("정답입니다.");
+		System.out.println("정답입니다!");
 	}
 }

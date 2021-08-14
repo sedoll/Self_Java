@@ -6,12 +6,12 @@ public class Main {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		Example exam = new Example();
 		int selct;
 		
 		do {
 			int rand = (int) (Math.random()*4+1);
-			
-			Example.example(rand);
+			exam.culc(rand);
 			
 			System.out.printf("다시 하겠습니까? 1.예 | 2. 아니오: ");
 			selct = sc.nextInt();
