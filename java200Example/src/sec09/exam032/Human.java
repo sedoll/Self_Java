@@ -1,4 +1,4 @@
-package sec09.exam03;
+package sec09.exam032;
 
 public class Human {
 	private String name;
