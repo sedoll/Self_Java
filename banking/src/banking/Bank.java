@@ -23,12 +23,12 @@ public class Bank{
         System.out.println("반갑습니다. SEDO 뱅크입니다.");
         //User Interface 작업
         while(run) {
-            System.out.println("--------------------------------------------");
-            System.out.println("1.계좌생성 |2.계좌목록 |3.예금   |4.출금   |5.종료  ");
-            System.out.println("--------------------------------------------");
+            System.out.println("----------------------------------------------------");
+            System.out.println("1.계좌생성 |2.계좌목록 |3.예금   |4.출금   |5.송금   |6.종료   ");
+            System.out.println("----------------------------------------------------");
             System.out.print("선택 >> ");
             int cmd = sc.nextInt();
-            if(cmd==5) {
+            if(cmd==6) {
                 System.out.println("뱅킹서비스를 종료합니다.");
                 run = false;
             } else if(cmd==1) {
@@ -56,6 +56,18 @@ public class Bank{
                 System.out.print("출금액 입력 >> ");
                 int balance = sc.nextInt();
                 this.withdraw(accountNo, balance);
+            } else if(cmd==5){
+            	if(index > 1) { //생성된 계좌가 두 개 이상일 때
+            		System.out.print("보낼 계좌번호 입력 >> ");
+                    String accountNo1 = sc.next();
+                    System.out.print("받을 계좌번호 입력 >> ");
+                    String accountNo2 = sc.next();
+                    System.out.print("송금 액 >>");
+                    int balance = sc.nextInt();
+                    this.trans(accountNo1, accountNo2, balance);
+            	} else {
+            		System.out.println("아직 계좌가 충분히 만들어 지지 않았습니다.");
+            	}
             } else {
                 System.out.println("올바른 선택이 아닙니다.");
             }
@@ -107,7 +119,7 @@ public class Bank{
     }
     
     //출금
-    private void withdraw(String accountNo,int amount) {
+    private boolean withdraw(String accountNo,int amount) {
         System.out.println("------");
         System.out.println("출금");
         System.out.println("------");
@@ -115,8 +127,42 @@ public class Bank{
         if(account.getBalance() >= amount) {
         	account.setBalance(account.getBalance()-amount);
             System.out.println("예금이 성공되었습니다.");
+            return true;
         } else {
-        	System.out.println("금액이 초과합니다. \n실패하였습니다.");
+        	System.out.println("금액이 초과됩니다. \n실패하였습니다.");
+        	return false;
+        }
+    }
+    
+ 	//송금
+    private void trans(String accountNo1, String accountNo2, int amount) {
+        System.out.println("------");
+        System.out.println("송금");
+        System.out.println("------");
+        this.findAccount(accountNo1);
+        boolean check = withdraw2(accountNo1, amount);
+        if(check == true) {
+        	deposit2(accountNo2, amount);
+        	System.out.println("송금이 성공되었습니다.");
+        } else {
+        	System.out.println("금액이 초과됩니다. \n실패하였습니다.");
+        }
+    }
+    
+    //송금 보냄
+    private void deposit2(String accountNo,int amount) {
+        Account account = this.findAccount(accountNo);
+        account.setBalance(account.getBalance()+amount);
+    }
+    
+    //송금 받음
+    private boolean withdraw2(String accountNo,int amount) {
+        Account account = this.findAccount(accountNo);
+        if(account.getBalance() >= amount) {
+        	account.setBalance(account.getBalance()-amount);
+            return true;
+        } else {
+        	return false;
         }
     }
     
