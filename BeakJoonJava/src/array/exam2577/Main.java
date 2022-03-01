@@ -10,7 +10,6 @@ public class Main {
 		int[] arr = new int[3];
 		int[] arrCount = new int[10];
 		int result = 1;
-		int c = 2;
 		
 		//선언된 배열 0으로 초기화
 		for(int i=0; i<arrCount.length; i++) {
