@@ -8,34 +8,26 @@ public class Exam1546 {
 		Scanner sc = new Scanner(System.in);
 		boolean run = true;
 		
-		// 과목 개수 입력
-		int subSize = sc.nextInt(); //입력
-		float[] subject = new float[subSize]; //배열 선언
-		float max = subject[0];
-		
-		// 과목 성적 입력
-		for(int i=0; i<subject.length; i++) {
-			subject[i] = sc.nextInt(); // 성적 값 입력
+		int subSize = sc.nextInt(); // 과목 갯수 입력
+		float[] score = new float[subSize]; //배열 선언 (정수형)
+		float[] newScore = new float[subSize];
+		float sum = 0; // 새로운 점수 합 변수
+		float max = 0; //최댓값을 알기위한 변수
+		 
+		for(int i=0; i<score.length; i++) { // 과목 성적 입력
+			score[i] = sc.nextFloat(); // 성적 값 입력 (실수형)
+			if(max < score[i]) { // 최댓값 비교
+				max = score[i];
+			}
 		}
 		
-//		while(run) {
-//			int i = 0;
-//			if(i >= subject.length) {
-//				run = false;
-//			} else {
-//				if(max < subject[i]) {
-//					max = subject[i];
-//					i++;
-//				}
-//			}
-//		}
-		
-		//성적 출력
-		for(int i=0; i<subject.length; i++) {
-			System.out.println(subject[i]);
+		for(int i=0; i<score.length; i++) { // 새로운 점수 생성
+			newScore[i] = (score[i] / max) * 100;
+			sum += newScore[i];
 		}
-		//최댓값
-		System.out.printf("\n최대값: " + max);
+		
+		float avg = sum / score.length; // 새로운 점수를 통한 평균 값 계산후 출력
+		System.out.println(avg); //성적 출력
 	}
 
 }

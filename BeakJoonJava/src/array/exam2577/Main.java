@@ -35,6 +35,8 @@ public class Main {
 		// 계산된 수의 자리수 계산
 		int leng = (int)(Math.log10(result)+1);
 		
+		System.out.println("값: " +  result); // 값
+		
 		//결과값의 이용된 숫자 계산
 		for(int i=0; i<leng; i++) {
 			for(int j=0; j<10; j++) {
@@ -47,7 +49,7 @@ public class Main {
 		
 		//계산된 숫자 값 출력
 		for(int i=0; i<arrCount.length; i++) {
-			System.out.println(arrCount[i]);
+			System.out.println(i + ": " + arrCount[i]);
 		}
 
 	}
