@@ -1,2 +1,0 @@
-a Hello
-(echo “File : a.txt”)
