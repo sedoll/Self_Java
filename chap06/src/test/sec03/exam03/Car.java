@@ -12,6 +12,7 @@ public class Car {
 		
 	}
 	
+	// 생성자 오버로딩
 	Car(String model) {
 //		this.model = model;
 		this(model, "검정", 100);

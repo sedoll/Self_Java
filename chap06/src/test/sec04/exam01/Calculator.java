@@ -1,4 +1,4 @@
-package test.sec03.exam04;
+package test.sec04.exam01;
 
 public class Calculator {
 	//ÇÊµå
