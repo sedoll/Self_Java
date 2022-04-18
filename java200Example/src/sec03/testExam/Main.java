@@ -7,7 +7,7 @@ public class Main {
 		int b = 3;
 		int c = 5;
 		
-		System.out.println("a = b = c 출력: " + (a = b = c));
+		System.out.println("a = b = c 출력: " + (a = c = b));
 		System.out.println("c = b = a 출력: " + (c = b = a));
 	}
 
