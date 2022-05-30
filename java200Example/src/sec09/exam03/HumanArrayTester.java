@@ -27,7 +27,7 @@ public class HumanArrayTester {
 		for(int i=0; i<q.length; i++) {
 			System.out.printf("q[%d]",i);
 			System.out.print("이름: ");
-			String name = sc.next();
+			String name = sc.nextLine();
 			System.out.print("신장: ");
 			int height = sc.nextInt();
 			System.out.print("체중: ");
