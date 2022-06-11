@@ -9,9 +9,9 @@ import javazoom.jl.player.Player;
 public class Music extends Thread {
 	
 	//필드
-	private Player player; // 자바 소리 라이브러리
+	private Player player; // 자바 음원재생 라이브러리
 	private boolean isLoop; // 무한반복 or 한번 재생
-	private File file;
+	private File file; // 파일 열기
 	private FileInputStream fis;
 	private BufferedInputStream bis;
 	

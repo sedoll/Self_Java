@@ -20,22 +20,22 @@ public class DynamicBeat extends JFrame {
 	private Image screenImage;
 	private Graphics screenGraphic;
 	
-	private Image background = new ImageIcon(Main.class.getResource("../images/background1.jpg")).getImage();
-	private JLabel menuBar = new JLabel(new ImageIcon(Main.class.getResource("../images/menubar.png")));
+	private Image background = new ImageIcon(Main.class.getResource("../images/background1.jpg")).getImage(); // 배경화면 지정
+	private JLabel menuBar = new JLabel(new ImageIcon(Main.class.getResource("../images/menubar.png"))); // 메뉴바
 	
-	private ImageIcon exitButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/btnOn.png"));
-	private ImageIcon exitButtonBasicImage = new ImageIcon(Main.class.getResource("../images/btn.png"));
-	private ImageIcon startButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/startButtonEntered.png"));
-	private ImageIcon startButtonBasicImage = new ImageIcon(Main.class.getResource("../images/startButtonBasic.png"));
-	private ImageIcon quitButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/quitButtonEntered.png"));
-	private ImageIcon quitButtonBasicImage = new ImageIcon(Main.class.getResource("../images/quitButtonBasic.png"));
+	private ImageIcon exitButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/btnOn.png")); // 나가기 버튼 마우스 오버 
+	private ImageIcon exitButtonBasicImage = new ImageIcon(Main.class.getResource("../images/btn.png")); // 나가기 버튼 기본
+	private ImageIcon startButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/startButtonEntered.png")); // 시작 버튼 마우스 오버
+	private ImageIcon startButtonBasicImage = new ImageIcon(Main.class.getResource("../images/startButtonBasic.png")); // 시작 버튼 기본
+	private ImageIcon quitButtonEnteredImage = new ImageIcon(Main.class.getResource("../images/quitButtonEntered.png")); // 종료 버튼 마우스 오버 
+	private ImageIcon quitButtonBasicImage = new ImageIcon(Main.class.getResource("../images/quitButtonBasic.png")); // 종료 버튼 기본
 	
 	
-	private JButton exitButton = new JButton(exitButtonBasicImage);
-	private JButton startButton = new JButton(startButtonBasicImage);
-	private JButton quitButton = new JButton(quitButtonBasicImage);
+	private JButton exitButton = new JButton(exitButtonBasicImage); // 나가기 버튼
+	private JButton startButton = new JButton(startButtonBasicImage); // 시작 버튼
+	private JButton quitButton = new JButton(quitButtonBasicImage); // 종료 버튼
 	
-	private int mouseX, mouseY;
+	private int mouseX, mouseY; // 마우스 좌표 변수
 	
 	// 생성자
 	public DynamicBeat() {
@@ -50,8 +50,9 @@ public class DynamicBeat extends JFrame {
 		setLayout(null);
 		
 		// 맨 위에 있는 게 GUI 이미지 상에서 맨 앞으로 옴
+		
 		// exit 버튼
-		exitButton.setBounds(1245, 0, 30, 30);
+		exitButton.setBounds(1245, 0, 30, 30); // 버튼이 x, y 축 위치에 x , y 크기 만큼 배치
 		exitButton.setBorderPainted(false);
 		exitButton.setContentAreaFilled(false);
 		exitButton.setFocusPainted(false);
