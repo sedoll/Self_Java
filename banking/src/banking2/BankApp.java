@@ -109,14 +109,20 @@ public class BankApp {
 			String ano = sc.next();// 계좌번호 입력
 			System.out.println("비밀번호 입력>");
 			int pw = sc.nextInt();
-			account = findAccount(ano);// 입력받은 정보로 계좌조회
-			if (account.getPw() == pw) // 비밀번호가 일치하는지 확인
-				break;// 반복문 빠져나가기
-			else
-				System.out.println("계좌번호 또는 비밀번호가 일치하지 않습니다.");
+			try {
+				account = findAccount(ano);// 입력받은 정보로 계좌조회
+				if (account.getPw() == pw) { // 비밀번호가 일치하는지 확인
+					System.out.println(account.getOwner() + " 님의 잔액: " + account.getBalance() + " 원");
+					System.out.println(account.getOwner() + " 님의 업무가 처리되었습니다. \n이용해 주셔서 감사합니다.");
+					break;
+				}
+				else
+					System.out.println("계좌번호 또는 비밀번호가 일치하지 않습니다.");
+			} catch (Exception e) {
+				System.out.println("아직 계좌 번호가 생성되지 않았습니다.");
+				break;
+			}
 		}
-		System.out.println(account.getOwner() + " 님의 잔액: " + account.getBalance() + " 원");
-		System.out.println(account.getOwner() + " 님의 업무가 처리되었습니다. \n이용해 주셔서 감사합니다.");
 	}
 
 	// 송금
@@ -204,5 +210,6 @@ public class BankApp {
 		}
 		return account;
 	}
-
+	
+//	private void 
 }
